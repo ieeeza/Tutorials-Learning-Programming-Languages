@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <h1>Compeonente com Propiedades Assistidas</h1>
-        <p>{{ idade }}</p>
-        <label>Ano Atual: </label>
-        <input type="number" v-model="anoNascimento" min="1900" />
-        <label>Ano Nascimento: </label>
-        <input type="number" v-model="anoAtual" min="2000" />
-    </div>
+  <div>
+    <h1>Compeonente com Propiedades Assistidas</h1>
+    <p>{{ idade }}</p>
+    <label>Ano Atual: </label>
+    <input type="number" v-model="anoNascimento" min="1900" />
+    <label>Ano Nascimento: </label>
+    <input type="number" v-model="anoAtual" min="2000" />
+  </div>
 </template>
 
 <script setup>
@@ -17,10 +17,10 @@ const anoAtual = ref(2000);
 const idade = ref(0);
 
 watch(anoAtual, (ano) => {
-    idade.value = ano - anoNascimento.value;
+  idade.value = ano - anoNascimento.value;
 });
 
 watch(anoNascimento, (ano) => {
-    idade.value = anoAtual.value - ano;
+  idade.value = anoAtual.value - ano;
 });
 </script>
