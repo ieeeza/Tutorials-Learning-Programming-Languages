@@ -1,6 +1,6 @@
 <p>Salve {{ name }}</p>
 
-<button (click)="submit($event)">Clica</button> 
+<button (click)="submit()">Clica</button>
 
 @if(deveMostrarTitulo) {
     <h1>Meu Titulo</h1>
@@ -13,3 +13,5 @@
 @for(item of listItens; track item) {
     <p>{{ item }}</p>
 }
+
+<h1> {{ minhaPropsDeFora }}</h1>

@@ -1,26 +1,29 @@
-import { Component, inject } from '@angular/core';
-import { EnviaFormularioService } from '../../services/envia-formulario.service';
+import { Component, inject, Input, Output, EventEmitter } from "@angular/core";
+import { EnviaFormularioService } from "../../services/envia-formulario.service";
 
 @Component({
-    selector: 'app-home',
+    selector: "app-home",
     imports: [],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.css',
+    templateUrl: "./home.component.html",
+    styleUrl: "./home.component.css",
 })
 export class HomeComponent {
-	private enviaFormularioService = inject(EnviaFormularioService);
-	name = 'César';
-	idButton = 'Salve';
-	meuBool = false;
-	deveMostrarTitulo = false;
-	listItens = ['salve', 'kfsadsajda', 'a'];
-	atualizaBool(valor: boolean) {
-		this.meuBool = valor;
-	}
+    private enviaFormularioService = inject(EnviaFormularioService);
+    name = "César";
+    idButton = "Salve";
+    meuBool = false;
+    deveMostrarTitulo = false;
+    listItens = ["salve", "kfsadsajda", "a"];
+    atualizaBool(valor: boolean) {
+        this.meuBool = valor;
+    }
 
-	submit() {
-		this.enviaFormularioService.enviaInformaçãoBackend(
-			'Enviando mentiras hehehehe'
-		);
-	}
+    @Output() emitindoValorName = new EventEmitter<string>();
+
+    @Input() minhaPropsDeFora!: string;
+ 
+    submit() {
+        this.emitindoValorName.emit(this.name);
+        this.enviaFormularioService.enviaInformaçãoBackend("Enviando mentiras hehehehe");
+    }
 }
