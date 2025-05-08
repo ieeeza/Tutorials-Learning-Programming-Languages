@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-color: #f2f0ea;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 30%;
+    height: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #a8d5e3;
+}
+
+.titleContainer,
+.tittleTasksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 150%;
+}
+
+.addTaskContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 10vh;
+}
+
+.addTaskContainer input {
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+}
+
+.addTaskContainer button {
+    padding: 5px;
+}
+
+.addTaskContainer button:hover {
+    cursor: pointer;
+}
+
+.tittleTasksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 2px;
+
+    &.feita {
+        background: #3ebd3e;
+        border-radius: 5px;
+        padding: 2px;
+        p {
+            text-decoration: line-through;
+            color: #ffffff;
+        }
+    }
+}

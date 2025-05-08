@@ -1,0 +1,27 @@
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="titleContainer">
+                <p>LISTA DE AFAZERES</p>
+            </div>
+            <div class="addTaskContainer">
+                <input placeholder="Adicionar" type="text" [(ngModel)]="novaTarefa"/>
+                <button type="button" (click)="adicionarTarefa()">Confirmar</button>
+            </div>
+            <div class="tittleTasksContainer">
+                <p>TAREFAS</p>
+            </div>
+            <div class="tasksContainer">
+                <div class="tasks">
+                    @for (tarefa of tarefas; track tarefa) {
+                        <div class="task" [class.feita]="tarefa.feita">
+                            <p>{{ tarefa.nome }}</p>
+                            <input title="completo" type="checkbox" (change)="marcaFeita(tarefa)" [checked]="tarefa.feita"/>
+                            <button title="remover" type="button" (click)="remove(tarefa)">REMOVER</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
