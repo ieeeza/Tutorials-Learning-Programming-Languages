@@ -1,2 +1,3 @@
-# javascript-practice
-java script syntax
+# JAVASCRIPT
+
+Sintaxe do Javascript com vários exemplos e projetos.
