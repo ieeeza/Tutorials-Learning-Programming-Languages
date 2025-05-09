@@ -1,0 +1,13 @@
+<body>
+    <main>
+        <div class="containerSearchInput">
+            <input placeholder="Digite o nome de um filme" type="text" [(ngModel)]="filmeNome"/>
+            <button type="button" (click)="buscarFilme()">BUSCAR</button>
+        </div>
+        <div class="filmeContainer">
+            @if (resultado) { @for (filme of resultado.results; track filme.id) {
+            <p>{{ filme.title }}</p>
+            } }
+        </div>
+    </main>
+</body>

@@ -1,7 +1,39 @@
 <body>
-    <main>
-        <div>
-            
+    <main class="main">
+        <div class="titleContainer">
+            <p>CONTATOS</p>
+        </div>
+        <div class="contatosContainer">
+            <div class="innerContainer">
+                @for (contato of contatos; track contato) {
+                <div class="contatoCardContainer">
+                    <div>
+                        <p>{{ contato.name }}</p>
+                        <p>{{ contato.numero }}</p>
+                        <p>{{ contato.descricao }}</p>
+                    </div>
+                </div>
+                }
+
+                <div class="contatoCardAddContainer">
+                    <button type="button" (click)="toggleCard()">+</button>
+                </div>
+
+                @if (showCard) {
+                <div class="float-card">
+                    <div>
+                        <h3>Adicionar Contato</h3>
+
+                        <input type="text" placeholder="Nome" [(ngModel)]="name" />
+                        <input type="number" placeholder="Número" [(ngModel)]="numero" />
+                        <textarea placeholder="Descrição" [(ngModel)]="descricao"></textarea>
+
+                        <button type="button" (click)="adicionarContato()">Salvar</button>
+                        <button type="button" (click)="toggleCard()">Fechar</button>
+                    </div>
+                </div>
+                }
+            </div>
         </div>
     </main>
 </body>

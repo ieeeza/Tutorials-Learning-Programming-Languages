@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main {
+    width: 90vw;
+    height: 90vh;
+    border: 1px solid #000;
+}
+
+.titleContainer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: larger;
+}
+
+.contatosContainer {
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.innerContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 40vh;
+    gap: 10px;
+}
+
+.contatoCardContainer {
+    width: 15vw;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.contatoCardContainer div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+
+.contatoCardAddContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.contatoCardAddContainer button {
+    padding: 20px;
+    border-radius: 20px;
+    border: 0.5px solid black;
+}
+
+.contatoCardAddContainer button:hover {
+    cursor: pointer;
+}
+
+.float-card {
+    position: fixed; /* Use fixed para centralizar na viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    width: 50%;
+    height: 50%;
+}
+
+.float-card div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.float-card div input {
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.float-card div button {
+    width: 20%;
+}
+
+.float-card div input::-webkit-outer-spin-button,
+.float-card div input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.float-card div textarea {
+    width: 40%;
+}
