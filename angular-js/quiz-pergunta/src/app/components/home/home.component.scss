@@ -1,0 +1,38 @@
+.header,
+.footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(25, 113, 163);
+}
+
+.main {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 70vh;
+    height: 60vh;
+}
+
+.tempo-container,
+.pontuacao-container {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.tempo-container p,
+.pontuacao-container p {
+    font-size: 40px;
+}
+
+.pergunta-container {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

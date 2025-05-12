@@ -1,0 +1,30 @@
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <div class="main-container">
+            <div class="tempo-container">
+                <p>TEMPO: {{ tempo }}</p>
+            </div>
+            <div class="pontuacao-container">
+                <p>PONTUACAO: {{ pontuacao }}</p>
+            </div>
+            <div class="pergunta-container">
+                <p>{{ pergunta }}</p>
+            </div>
+            <div class="reposta-container">
+                @for(resposta of respostas; track resposta) {
+                <ol>
+                    <li>
+                        <input title="resp" type="checkbox" />
+                        <p>{{ resposta }}</p>
+                    </li>
+                </ol>
+                }
+            </div>
+            <div class="botao-container">
+                <button type="button">RESPONDER</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+</body>
