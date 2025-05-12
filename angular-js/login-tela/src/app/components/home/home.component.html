@@ -1,0 +1,21 @@
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <div class="main-container">
+            <div class="title-container">
+                <p>LOGIN</p>
+            </div>
+            <div class="form-container">
+                <div class="input-container">
+                    <input  placeholder="email" type="email" [(ngModel)]="email">
+                    <input title="password" placeholder="senha" type="password" [(ngModel)]="password">
+                </div>
+                <div class="forget-container">
+                    <button type="button"(click)="forget()">esqueceu a senha?</button>
+                </div>
+                <button class="login-button" type="button" (click)="login()">ENTRAR</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+</body>
