@@ -16,17 +16,19 @@
 .main-container {
     width: 70vh;
     height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.tempo-container,
-.pontuacao-container {
+.tempo-container{
     height: 5vh;
     display: flex;
     align-items: center;
 }
 
-.tempo-container p,
-.pontuacao-container p {
+.tempo-container p {
     font-size: 40px;
 }
 
@@ -35,4 +37,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.resposta-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.resposta-container ol li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
